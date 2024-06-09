@@ -1,0 +1,27 @@
+name: Workflow GitHUb4Women da Ana Maria
+
+on:
+  page_build
+
+jobs:
+  build:
+    # Deploy job
+    
+# Deploy job
+deploy:
+    # Add a dependency to the build job
+    needs: build
+
+permissions:
+      pages: write      # to deploy to Pages
+
+# Deploy no GitHub Pages
+environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+      runs-on: dotnet
+      steps:
+        - name: Deploy to GitHub Pages Workflow da Ana Maria
+          id: deployment
+          uses: actions/deploy-pages@v4

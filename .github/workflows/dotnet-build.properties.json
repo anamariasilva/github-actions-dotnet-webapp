@@ -1,0 +1,13 @@
+{
+    "name": "Workflow GitHUb4Women da Ana Maria",
+    "description": "Workflow Laboratório Módulo 4 - GitHub4Women.",
+    "iconName": "octicon command-palette",
+    "categories": [
+        "Go"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}
